@@ -1,4 +1,3 @@
- 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,9 +44,17 @@
         </div>
     </section>
 
+    <!-- Pre-order Section -->
+    <section id="preorder">
+        <h2>Pre-order Your Battery Now!</h2>
+        <button id="preorderButton">Pre-order Now</button>
+        <p id="preorderInfo" style="display:none;">Thank you for pre-ordering! Your unique pre-order code is: <span id="preorderCode"></span>. This code will be sent to your email and to sales@deurnag.com.</p>
+    </section>
+
     <!-- Contact Form -->
     <section id="contact">
         <h2>Request More Information</h2>
+        <p>For any inquiries, you can contact us at <a href="mailto:info@deurnag.com">info@deurnag.com</a> or reach us directly at <a href="tel:+26281843212">+26281843212</a>.</p>
         <form action="contact.php" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -61,5 +68,18 @@
         &copy; 2025 DeurNag Energy Solutions. All rights reserved.
     </footer>
 
+    <!-- JavaScript to generate a unique pre-order code -->
+    <script>
+        document.getElementById("preorderButton").addEventListener("click", function() {
+            const uniqueCode = 'PN' + Math.random().toString(36).substr(2, 9).toUpperCase(); // Generates a unique code
+            document.getElementById("preorderCode").textContent = uniqueCode;
+            document.getElementById("preorderInfo").style.display = 'block';
+
+            // Send email with pre-order code (this would need server-side code to actually send emails)
+            // For example: an AJAX request to a PHP script or API for sending email.
+            alert("Your pre-order code will be sent to your email and sales@deurnag.com.");
+        });
+    </script>
+
 </body>
-</html> 
+</html>
