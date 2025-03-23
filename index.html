@@ -47,8 +47,16 @@
     <!-- Pre-order Section -->
     <section id="preorder">
         <h2>Pre-order Your Battery Now!</h2>
-        <button id="preorderButton">Pre-order Now</button>
-        <p id="preorderInfo" style="display:none;">Thank you for pre-ordering! Your unique pre-order code is: <span id="preorderCode"></span>. This code will be sent to your email and to sales@deurnag.com.</p>
+        <form id="preorderForm">
+            <label for="batteryType">Choose Your Battery Type:</label>
+            <select id="batteryType" name="batteryType" required>
+                <option value="5-15kWh Wall-Mounted Battery">5-15kWh Wall-Mounted Battery</option>
+                <option value="48V 100AMP Stackable Storage">48V 100AMP Stackable Storage</option>
+            </select>
+
+            <button type="button" id="preorderButton">Pre-order Now</button>
+            <p id="preorderInfo" style="display:none;">Thank you for pre-ordering! Your unique pre-order code is: <span id="preorderCode"></span>. This code will be sent to your email and to sales@deurnag.com.</p>
+        </form>
     </section>
 
     <!-- Contact Form -->
@@ -71,13 +79,14 @@
     <!-- JavaScript to generate a unique pre-order code -->
     <script>
         document.getElementById("preorderButton").addEventListener("click", function() {
+            const batteryType = document.getElementById("batteryType").value; // Get selected battery type
             const uniqueCode = 'PN' + Math.random().toString(36).substr(2, 9).toUpperCase(); // Generates a unique code
             document.getElementById("preorderCode").textContent = uniqueCode;
             document.getElementById("preorderInfo").style.display = 'block';
 
-            // Send email with pre-order code (this would need server-side code to actually send emails)
+            // Send email with pre-order code and battery type (this would need server-side code to actually send emails)
             // For example: an AJAX request to a PHP script or API for sending email.
-            alert("Your pre-order code will be sent to your email and sales@deurnag.com.");
+            alert("Your pre-order code for the " + batteryType + " will be sent to your email and sales@deurnag.com.");
         });
     </script>
 
