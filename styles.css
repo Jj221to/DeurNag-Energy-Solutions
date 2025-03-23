@@ -1,95 +1,60 @@
- 
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
 }
 
-/* Navigation Bar */
 nav {
-    background: #002147;
+    background: #333;
     color: white;
-    padding: 15px;
-    text-align: center;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-/* Header Section */
 header {
-    text-align: center;
-    padding: 50px;
-    background: #0056b3;
+    background: #444;
     color: white;
-}
-
-header h2 {
-    margin: 0;
-}
-
-/* Sections */
-section {
-    padding: 40px 20px;
+    padding: 50px 20px;
     text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+section {
+    padding: 20px;
 }
 
 .product {
-    display: inline-block;
-    width: 300px;
-    background: white;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Form Styling */
-form {
-    width: 50%;
-    margin: auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 button {
-    background: #0056b3;
+    background-color: #4CAF50;
     color: white;
+    padding: 15px 32px;
+    font-size: 16px;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background: #003d82;
-}
-
-/* Footer */
-footer {
-    background: #002147;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    background-color: #45a049;
 }
